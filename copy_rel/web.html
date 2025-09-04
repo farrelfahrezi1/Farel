@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .carousel-item {
+      position: relative;
+      height: 60vh;
+      /* margin-top: 20px; */
+      /* Menyesuaikan tinggi gambar dengan viewport */
+    }
+
+    .carousel-item img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      filter: brightness(0.5);
+      /* Menggelapkan gambar */
+    }
+
+    .carousel-caption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      color: #fff;
+      text-align: center;
+      font-size: 1.5rem;
+      padding: 0 10px;
+      /* Menambahkan padding horizontal */
+    }
+
+    .carousel-caption h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .carousel-caption p {
+      font-size: 1rem;
+      letter-spacing: 1px;
+    }
+
+    .carousel-caption .btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    /* Styling untuk tombol navigasi carousel */
+    .carousel-control-prev,
+    .carousel-control-next {
+      background-color: transparent;
+      /* Menghapus background */
+      border: none;
+      /* Menghapus border */
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: rgba(0, 0, 0, 0.5);
+      /* Mengatur warna ikon jika diperlukan */
+    }
+
+    .carousel-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
+      z-index: 5;
+    }
+
+    /* Styling indikator bulet */
+    .carousel-indicators {
+      bottom: 20px;
+      /* Jarak dari bawah */
+      z-index: 15;
+    }
+
+    .carousel-indicators [data-bs-target] {
+      background-color: rgba(255, 255, 255, 0.5);
+      /* Warna indikator */
+      border-radius: 50%;
+      width: 12px;
+      height: 12px;
+    }
+
+    .carousel-indicators .active {
+      background-color: #fff;
+      /* Warna indikator aktif */
+    }
+
+    /* Responsif untuk tampilan kecil */
+    @media (max-width: 768px) {
+      .carousel-item {
+        height: 45vh;
+        /* Menyesuaikan tinggi gambar untuk perangkat kecil */
+      }
+
+      .carousel-caption {
+        font-size: 1.2rem;
+        padding: 0 5px;
+        /* Mengurangi padding horizontal */
+      }
+
+      .carousel-caption h1 {
+        font-size: 1.5rem;
+      }
+
+      .carousel-caption p {
+        font-size: 0.875rem;
+      }
+
+      .carousel-caption .btn {
+        padding: 8px 16px;
+        font-size: 0.875rem;
+      }
+
+      .carousel-control-prev,
+      .carousel-control-next {
+        display: none;
+        /* Menyembunyikan tombol navigasi pada tampilan kecil */
+      }
+
+      .carousel-indicators {
+        bottom: 10px;
+        /* Menurunkan posisi indikator */
+      }
+    }
+
+    /* Animasi untuk Judul (h1) */
+    .carousel-caption h1 {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: all 0.7s ease-in-out;
+    }
+
+    .carousel-item.active .carousel-caption h1 {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* Animasi untuk Paragraf (p) */
+    .carousel-caption p {
+      opacity: 0;
+      transform: translateX(50px);
+      transition: all 0.7s ease-in-out 0.2s;
+    }
+
+    .carousel-item.active .carousel-caption p {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* Animasi untuk Tombol (a.btn) */
+    .carousel-caption .btn {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.7s ease-in-out 0.4s;
+    }
+
+    .carousel-item.active .carousel-caption .btn {
+      opacity: 1;
+      transform: translateY(0);
+    }
+</style>
+<body>
+    <nav>
+        
+    </nav>
+</body>
+</html>
